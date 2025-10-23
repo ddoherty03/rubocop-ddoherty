@@ -1,0 +1,46 @@
+* rubocop-ddoherty
+
+Shared RuboCop configuration to be consumed via =inherit_gem=.
+
+** Usage
+
+Add the gem to the project's Gemfile (via GitHub):
+
+#+begin_src ruby
+# Use the published gem (if you later push it to RubyGems):
+# gem 'rubocop-ddoherty', '~> 0.1.0', require: false
+
+# Or point at this git repo (recommended if keeping it on GitHub only)
+gem 'rubocop-ddoherty', git: 'https://github.com/ddoherty03/rubocop-ddoherty.git', branch: 'main', require: false
+#+end_src
+
+Run:
+
+#+begin_src sh
+bundle install
+#+end_src
+
+In your project =.rubocop.yml=:
+
+#+begin_src yaml
+inherit_gem:
+  rubocop-ddoherty: 'config/default.yml'
+
+AllCops:
+  TargetRubyVersion: 3.2
+#+end_src
+
+** Notes
+
+- Using =require: false= prevents Bundler from trying to require the gem at runtime. RuboCop sees the installed gem when run via =bundle exec rubocop=.
+- If the gem is private, CI needs access to the repo (see CI notes in the project README or ask me and I'll add a recommended GitHub Actions snippet).
+- When you update the shared config, bump the VERSION in =lib/rubocop/ddoherty/version.rb=, tag the repo, and update downstream Gemfiles (or point them at a branch/ref).
+
+** Example config path inside the gem
+
+The shared configuration file lives at =config/default.yml= inside this gem. Consume it with:
+
+#+begin_src yaml
+inherit_gem:
+  rubocop-ddoherty: 'config/default.yml'
+#+end_src
