@@ -7,11 +7,7 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/**/*'
 
-Style/FrozenStringLiteralComment:
-  Enabled: true
-
 # Add your preferred cops and settings here...
-
 plugins:
   - rubocop-rspec
   - rubocop-performance
@@ -164,7 +160,7 @@ Naming/PredicatePrefix:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: always, never
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
   EnforcedStyle: always
 
 # I like using !! to convert a value to boolean.
