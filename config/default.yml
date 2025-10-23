@@ -6,6 +6,7 @@ AllCops:
   Exclude:
     - 'db/schema.rb'
     - 'vendor/**/*'
+  SuggestExtensions: false
 
 # Add your preferred cops and settings here...
 plugins:
