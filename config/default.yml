@@ -12,10 +12,12 @@ AllCops:
 inherit_gem:
   rubocop-shopify: rubocop.yml
 
-require:
-  - rubocop-rspec
+plugin:
   - rubocop-performance
   - rubocop-rake
+
+require:
+  - rubocop-rspec
 
 Style/DateTime:
   Enabled: false
