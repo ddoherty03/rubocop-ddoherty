@@ -15,8 +15,6 @@ inherit_gem:
 plugin:
   - rubocop-performance
   - rubocop-rake
-
-require:
   - rubocop-rspec
 
 Style/DateTime:
