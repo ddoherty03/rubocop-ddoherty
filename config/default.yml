@@ -12,7 +12,7 @@ AllCops:
 inherit_gem:
   rubocop-shopify: rubocop.yml
 
-plugin:
+plugins:
   - rubocop-performance
   - rubocop-rake
   - rubocop-rspec
