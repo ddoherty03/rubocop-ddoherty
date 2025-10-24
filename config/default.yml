@@ -14,7 +14,6 @@ inherit_gem:
 
 require:
   - rubocop-rspec
-  - rubocop-shopify
   - rubocop-performance
   - rubocop-rake
 
