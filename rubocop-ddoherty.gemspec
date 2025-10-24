@@ -26,14 +26,3 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rubocop-performance', '~> 1.0'         # allow 1.x
   s.add_runtime_dependency 'rubocop-rake',        '>= 0.4', '< 1.0'
 end
-
-
-# Important parts of rubocop-ddoherty.gemspec (snippet)
-require_relative 'lib/rubocop/ddoherty/version'
-
-Gem::Specification.new do |s|
-  s.name    = 'rubocop-ddoherty'
-  s.version = RuboCop::Ddoherty::VERSION
-  # ... other metadata ...
-
-end
