@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   # Runtime dependencies: ensure consumers get the plugins automatically.
   # Use conservative constraints that allow minor/patch updates but avoid
   # pulling an incompatible major.
-  s.add_runtime_dependency 'rubocop-rspec',       '~> 2.0'
-  s.add_runtime_dependency 'rubocop-shopify',     '~> 2.0'
   s.add_runtime_dependency 'rubocop-performance', '~> 1.0'
   s.add_runtime_dependency 'rubocop-rake',        '>= 0.7'
+  s.add_runtime_dependency 'rubocop-rspec',       '~> 2.0'
+  s.add_runtime_dependency 'rubocop-shopify',     '~> 2.0'
 end
