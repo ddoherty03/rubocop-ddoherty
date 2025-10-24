@@ -16,4 +16,24 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*', 'config/**/*', 'README.org', 'LICENSE.txt', 'rubocop-ddoherty.gemspec']
 
   # runtime dependencies: none required for config gem itself
+  # IMPORTANT: declare the RuboCop plugin gems as runtime dependencies so
+  # consuming projects automatically get them when they install this gem.
+  # Runtime dependencies: ensure consumers get the plugins automatically.
+  # Use conservative constraints that allow minor/patch updates but avoid
+  # pulling an incompatible major.
+  s.add_runtime_dependency 'rubocop-rspec',       '>= 2.0', '< 3.0'   # allow 2.x
+  s.add_runtime_dependency 'rubocop-shopify',     '>= 0.4', '< 1.0'   # avoid potential breaking 1.x
+  s.add_runtime_dependency 'rubocop-performance', '~> 1.0'         # allow 1.x
+  s.add_runtime_dependency 'rubocop-rake',        '>= 0.4', '< 1.0'
+end
+
+
+# Important parts of rubocop-ddoherty.gemspec (snippet)
+require_relative 'lib/rubocop/ddoherty/version'
+
+Gem::Specification.new do |s|
+  s.name    = 'rubocop-ddoherty'
+  s.version = RuboCop::Ddoherty::VERSION
+  # ... other metadata ...
+
 end
