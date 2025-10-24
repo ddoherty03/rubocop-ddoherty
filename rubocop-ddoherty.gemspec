@@ -23,6 +23,6 @@ Gem::Specification.new do |s|
   # pulling an incompatible major.
   s.add_runtime_dependency 'rubocop-performance', '~> 1.0'
   s.add_runtime_dependency 'rubocop-rake',        '>= 0.7'
-  s.add_runtime_dependency 'rubocop-rspec',       '~> 2.0'
+  s.add_runtime_dependency 'rubocop-rspec',       '~> 3.0'
   s.add_runtime_dependency 'rubocop-shopify',     '~> 2.0'
 end
