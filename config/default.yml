@@ -1,3 +1,4 @@
+# config/default.yml
 # Your canonical, shared RuboCop settings.
 # Customize as you like; downstream projects can override any of these settings.
 AllCops:
@@ -8,14 +9,14 @@ AllCops:
     - 'vendor/**/*'
   SuggestExtensions: false
 
-# Add your preferred cops and settings here...
-plugins:
-  - rubocop-rspec
-  - rubocop-performance
-  - rubocop-rake
-
 inherit_gem:
   rubocop-shopify: rubocop.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-shopify
+  - rubocop-performance
+  - rubocop-rake
 
 Style/DateTime:
   Enabled: false
